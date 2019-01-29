@@ -1,13 +1,14 @@
 <template>
-<div>
-  <v-app class="white">
+  <v-app id="app" class="white">
     <NavBar></NavBar>
+    <main>
+      <router-view></router-view>
+    </main>
   </v-app>
-</div>
 </template>
 
 <script>
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
 
 export default {
   name: 'App',

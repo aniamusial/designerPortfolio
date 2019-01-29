@@ -4,8 +4,12 @@
     <img src="../assets/logo.png" height="60%"/>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat>Projects</v-btn>
-        <v-btn flat>About</v-btn>
+        <router-link to="/">
+          <v-toolbar-title to="/" router flat>Projects</v-toolbar-title>
+        </router-link>
+        <router-link to="/about">
+          <v-toolbar-title to="/about" router flat>About</v-toolbar-title>
+        </router-link>
       </v-toolbar-items>
     </v-toolbar>
     <v-divider id="divider"></v-divider>
@@ -13,7 +17,6 @@
 </template>
 
 <script>
-
 export default {
     name: 'NavBar'
 }
@@ -26,6 +29,16 @@ export default {
 
     #divider {
         border: 1px solid #000;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      padding: 2rem;
+    }
+
+    a:hover {
+      color: grey;
     }
     
 </style>
