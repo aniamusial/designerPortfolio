@@ -11,3 +11,10 @@ export default {
     name: 'About'
 }
 </script>
+
+<style scoped>
+
+h1 {
+  margin-top: 20%;
+}
+</style>

@@ -1,13 +1,38 @@
 <template>
-<v-container>
-  <v-layout>
-    <h1>Home page</h1>
+<v-layout>
+        <v-container v-bind="{ [`grid-list`]: true }" fluid>
+          <v-layout row wrap>
+            <v-flex
+              v-for="(project) in projects"
+              :key="project.id"
+              xs4
+            >
+              <v-card flat tile>
+                <v-img
+                  :src="project.image[0]" class="image"
+                >
+                </v-img>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
   </v-layout>
-</v-container>
 </template>
-
 <script>
+
+import {ProjectsList} from '../projectsList.js'
+
 export default {
-    name: 'Home'
+    name: 'Home',
+    data() {
+      return {
+        projects: ProjectsList.$data.projects
+      }
+    }
 }
 </script>
+
+<style scoped>
+
+
+</style>
